@@ -1,0 +1,14 @@
+[manifest]
+version = "1"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "project.lua"
+pattern = '''project.res.y = 360'''
+position = "after"
+payload = '''
+project.res.x = 640
+'''
+match_indent = true
